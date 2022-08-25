@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noob's library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    
+    <button data-modal-target="#modal">New Book</button>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Example Modal</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form action="#" onsubmit="return false">
+                <div class="div1">
+                  <label for="title">Title</label>
+                  <input type="text" name="title" id="title" />
+                </div>
+                <div class="div1">
+                  <label for="author">Author</label>
+                  <input type="text" name="author" id="author" />
+                </div>
+                <div class="div1">
+                  <label for="pages">Pages</label>
+                  <input type="number" name="pages" id="pages" />
+                </div>
+                <div class="div2">
+                  <label for="readstatus">Have you read this book?</label>
+                  <input type="checkbox" name="readstatus" id="readstatus" value="read" />
+                </div>
+                <button id="addBook">Add new book</button>
+              </form>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <h2>Your books:</h2>
+    <div id="cardContainer"></div>
 </body>
 </html>
